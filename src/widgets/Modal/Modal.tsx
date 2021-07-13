@@ -16,8 +16,7 @@ interface Props extends InjectedProps {
 const StyledModal = styled.div`
   background: ${({ theme }) => theme.modal.background};
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
-  border: 1px solid ${({ theme }) => theme.colors.borderColor};
-  border-radius: 32px;
+  border-radius: 0px;
   width: 100%;
   z-index: ${({ theme }) => theme.zIndices.modal};
   overflow-y: auto;
@@ -28,10 +27,14 @@ const StyledModal = styled.div`
   }
 `;
 
+const StyledIconButton = styled(IconButton)`
+  border: 0px;
+`;
+
 const ModalHeader = styled.div`
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e9eaeb;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.textDisabled};
   align-items: center;
   padding: 12px 24px;
 `;
@@ -47,22 +50,22 @@ const Modal: React.FC<Props> = ({
   onBack,
   children,
   hideCloseButton = false,
-  bodyPadding = "24px",
+  bodyPadding = "24px"
 }) => (
   <StyledModal>
     <ModalHeader>
       <ModalTitle>
         {onBack && (
-          <IconButton variant="text" onClick={onBack} area-label="go back" mr="8px">
-            <ArrowBackIcon color="primary" />
-          </IconButton>
+          <StyledIconButton variant="text" onClick={onBack} area-label="go back" mr="8px">
+            <ArrowBackIcon color="primaryDark" />
+          </StyledIconButton>
         )}
-        <Heading>{title}</Heading>
+        <Heading color="primaryDark">{title}</Heading>
       </ModalTitle>
       {!hideCloseButton && (
-        <IconButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
-          <CloseIcon color="primary" />
-        </IconButton>
+        <StyledIconButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
+          <CloseIcon color="primaryDark" />
+        </StyledIconButton>
       )}
     </ModalHeader>
     <Flex flexDirection="column" p={bodyPadding}>

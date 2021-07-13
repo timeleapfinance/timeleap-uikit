@@ -1,4 +1,6 @@
 import styled, { keyframes, DefaultTheme } from "styled-components";
+import { Text } from "../../components/Text";
+import { Colors } from "../../theme/types";
 import { MENU_ENTRY_HEIGHT } from "./config";
 
 export interface Props {
@@ -27,12 +29,16 @@ const MenuEntry = styled.div<Props>`
   cursor: pointer;
   display: flex;
   align-items: center;
-  height: ${MENU_ENTRY_HEIGHT}px;
+  height: ${({ secondary }) => (secondary ? "40px" : "64px")};
+  margin: ${({ secondary }) => (secondary ? "0px" : "4px 0px")};
   padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
-  background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
+  background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "#bd3e41")};
   color: ${({ theme }) => theme.colors.textSubtle};
   box-shadow: ${({ isActive, theme }) => (isActive ? `inset 4px 0px 0px ${theme.colors.primary}` : "none")};
+  line-height: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
 
   a {
     display: flex;
@@ -46,24 +52,24 @@ const MenuEntry = styled.div<Props>`
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.tertiary};
+    opacity: 0.8;
   }
 
   // Safari fix
   flex-shrink: 0;
 
   &.rainbow {
-    -webkit-background-clip: text;
+    background-clip: text;
     animation: ${rainbowAnimation} 3s ease-in-out infinite;
     background: ${({ theme }) => theme.colors.gradients.bubblegum};
-    background-size: 200% 100%;
+    background-size: 400% 100%;
     font-weight: bold;
   }
 `;
 MenuEntry.defaultProps = {
   secondary: false,
   isActive: false,
-  role: "button",
+  role: "button"
 };
 
 export { MenuEntry, LinkLabel };

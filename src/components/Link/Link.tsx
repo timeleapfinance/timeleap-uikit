@@ -10,6 +10,7 @@ const StyledLink = styled(Text)<LinkProps>`
   width: fit-content;
   &:hover {
     text-decoration: underline;
+    color: ${({ theme }) => theme.colors.tertiary};
   }
 `;
 
@@ -19,7 +20,7 @@ const Link: React.FC<LinkProps> = ({ external, ...props }) => {
 };
 
 Link.defaultProps = {
-  color: "primary",
+  color: "primaryBright"
 };
 
 export default Link;

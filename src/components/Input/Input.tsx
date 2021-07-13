@@ -1,5 +1,6 @@
 import styled, { DefaultTheme } from "styled-components";
 import { InputProps, scales } from "./types";
+import { Colors } from "../../theme/colors";
 
 interface StyledInputProps extends InputProps {
   theme: DefaultTheme;
@@ -35,9 +36,9 @@ const getHeight = ({ scale = scales.MD }: StyledInputProps) => {
 const Input = styled.input<InputProps>`
   background-color: ${({ theme }) => theme.colors.input};
   border: 0;
-  border-radius: 16px;
+  border-radius: ${({ theme }) => theme.radii.default};
   box-shadow: ${getBoxShadow};
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.primaryDark};
   display: block;
   font-size: 16px;
   height: ${getHeight};
@@ -46,7 +47,7 @@ const Input = styled.input<InputProps>`
   width: 100%;
 
   &::placeholder {
-    color: ${({ theme }) => theme.colors.textSubtle};
+    color: ${({ theme }) => theme.colors.textInput};
   }
 
   &:disabled {
@@ -64,7 +65,7 @@ const Input = styled.input<InputProps>`
 Input.defaultProps = {
   scale: scales.MD,
   isSuccess: false,
-  isWarning: false,
+  isWarning: false
 };
 
 export default Input;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { PancakeRoundIcon, CogIcon, SvgProps } from "../../components/Svg";
+import { LogoRoundIcon, CogIcon, SvgProps } from "../../components/Svg";
 import Text from "../../components/Text/Text";
 import Flex from "../../components/Flex/Flex";
 import Dropdown from "../../components/Dropdown/Dropdown";
@@ -22,7 +22,7 @@ const Container = styled.div`
   flex: none;
   padding: 8px 4px;
   background-color: ${({ theme }) => theme.nav.background};
-  border-top: solid 2px rgba(133, 133, 133, 0.1);
+  border-top: solid 2px transparent;
 `;
 
 const PriceLink = styled.a`
@@ -63,13 +63,13 @@ const PanelFooter: React.FC<Props> = ({
   currentLang,
   langs,
   setLang,
-  priceLink,
+  priceLink
 }) => {
   if (!isPushed) {
     return (
       <Container>
         <IconButton variant="text" onClick={() => pushNav(true)}>
-          <CogIcon />
+          <CogIcon color="textSubtle" />
         </IconButton>
       </Container>
     );
@@ -80,7 +80,7 @@ const PanelFooter: React.FC<Props> = ({
       <SocialEntry>
         {cakePriceUsd ? (
           <PriceLink href={priceLink} target="_blank">
-            <PancakeRoundIcon width="24px" mr="8px" />
+            <LogoRoundIcon width="24px" mr="8px" />
             <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
           </PriceLink>
         ) : (
@@ -90,12 +90,12 @@ const PanelFooter: React.FC<Props> = ({
           {socials.map((social, index) => {
             const Icon = Icons[social.icon];
             const iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
-            const mr = index < socials.length - 1 ? "8px" : 0;
+            const mr = index < socials.length - 1 ? "24px" : 0;
             if (social.items) {
               return (
                 <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
                   {social.items.map((item) => (
-                    <Link external key={item.label} href={item.href} aria-label={item.label} color="textSubtle">
+                    <Link external key={item.label} href={item.href} aria-label={item.label} color="primaryDark">
                       {item.label}
                     </Link>
                   ))}
@@ -114,11 +114,11 @@ const PanelFooter: React.FC<Props> = ({
         <Button variant="text" onClick={() => toggleTheme(!isDark)}>
           {/* alignItems center is a Safari fix */}
           <Flex alignItems="center">
-            <SunIcon color={isDark ? "textDisabled" : "text"} width="24px" />
+            <SunIcon color={isDark ? "textDisabled" : "textSubtle"} width="24px" />
             <Text color="textDisabled" mx="4px">
               /
             </Text>
-            <MoonIcon color={isDark ? "text" : "textDisabled"} width="24px" />
+            <MoonIcon color={isDark ? "textSubtle" : "textDisabled"} width="24px" />
           </Flex>
         </Button>
         <Dropdown
@@ -135,9 +135,9 @@ const PanelFooter: React.FC<Props> = ({
               fullWidth
               onClick={() => setLang(lang)}
               // Safari fix
-              style={{ minHeight: "32px", height: "auto" }}
+              style={{ minHeight: "32px", height: "auto", border: "0px" }}
             >
-              {lang.language}
+              <Text color="primaryDark">{lang.language}</Text>
             </MenuButton>
           ))}
         </Dropdown>

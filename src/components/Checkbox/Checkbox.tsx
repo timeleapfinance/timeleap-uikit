@@ -23,7 +23,7 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })<CheckboxProps>`
   transition: background-color 0.2s ease-in-out;
   border: 0;
   border-radius: 8px;
-  background-color: ${({ theme }) => theme.colors.input};
+  background-color: ${({ theme }) => theme.colors.primaryBright};
   box-shadow: ${({ theme }) => theme.shadows.inset};
 
   &:after {
@@ -43,12 +43,12 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })<CheckboxProps>`
   }
 
   &:hover:not(:disabled):not(:checked) {
-    box-shadow: ${({ theme }) => theme.shadows.focus};
+    box-shadow: ${({ theme }) => theme.shadows.active};
   }
 
   &:focus {
     outline: none;
-    box-shadow: ${({ theme }) => theme.shadows.focus};
+    box-shadow: ${({ theme }) => theme.shadows.active};
   }
 
   &:checked {
@@ -65,7 +65,7 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })<CheckboxProps>`
 `;
 
 Checkbox.defaultProps = {
-  scale: scales.MD,
+  scale: scales.MD
 };
 
 export default Checkbox;

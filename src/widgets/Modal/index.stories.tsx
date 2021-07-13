@@ -7,7 +7,7 @@ import Heading from "../../components/Heading/Heading";
 export default {
   title: "Widgets/Modal",
   component: Modal,
-  argTypes: {},
+  argTypes: {}
 };
 
 interface CustomModalProps extends InjectedProps {
@@ -16,7 +16,7 @@ interface CustomModalProps extends InjectedProps {
 
 const CustomModal: React.FC<CustomModalProps> = ({ title, onDismiss }) => (
   <Modal title={title} onDismiss={onDismiss}>
-    <Heading>{title}</Heading>
+    <Heading color="primaryDark">{title}</Heading>
     <Button>This button Does nothing</Button>
   </Modal>
 );

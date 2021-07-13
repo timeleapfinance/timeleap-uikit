@@ -8,7 +8,7 @@ import BreadCrumbs from "./Breadcrumbs";
 export default {
   title: "Components/Breadcrumbs",
   component: BreadCrumbs,
-  argTypes: {},
+  argTypes: {}
 };
 
 export const Default: React.FC = () => {
@@ -18,8 +18,8 @@ export const Default: React.FC = () => {
         <Link href="/" color="secondary" style={{ fontWeight: 400 }}>
           Link
         </Link>
-        <Text color="textDisabled">Crumb 1</Text>
-        <Text color="textDisabled">Crumb 2</Text>
+        <Text color="primaryBright">Crumb 1</Text>
+        <Text color="primaryBright">Crumb 2</Text>
       </BreadCrumbs>
       <BreadCrumbs>
         <Text>PancakeSwap</Text>
@@ -42,7 +42,7 @@ export const CustomSeparator: React.FC = () => {
         </BreadCrumbs>
       </Text>
       <Text mb="16px">
-        <BreadCrumbs separator={<WonIcon width="48px" />}>
+        <BreadCrumbs separator={<LogoIcon width="48px" />}>
           <Link href="/" color="failure" style={{ fontWeight: 400 }}>
             Link
           </Link>

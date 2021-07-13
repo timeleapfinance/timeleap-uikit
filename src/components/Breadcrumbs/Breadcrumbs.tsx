@@ -7,7 +7,7 @@ import { BreadcrumbsProps } from "./types";
 
 const Separator = styled.div`
   align-items: center;
-  color: currentColor;
+  color: ${({ theme }) => theme.colors.primaryBright};
   display: flex;
   justify-content: center;
   padding-left: 4px;
@@ -26,7 +26,7 @@ const Separator = styled.div`
 
 const StyledBreadcrumbs = styled.ul`
   align-items: center;
-  color: ${({ theme }) => theme.colors.textDisabled};
+  color: ${({ theme }) => theme.colors.primaryBright};
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
@@ -45,7 +45,7 @@ const insertSeparators = (items: ReactNode[], separator: BreadcrumbsProps["separ
       <Separator aria-hidden key={`seperator-${index}`}>
         {separator}
       </Separator>,
-      item,
+      item
     ];
   }, []);
 

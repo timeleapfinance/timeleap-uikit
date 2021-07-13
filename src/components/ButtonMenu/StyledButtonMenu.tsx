@@ -10,14 +10,19 @@ const getBackgroundColor = ({ theme, variant }: StyledButtonMenuProps) => {
   return theme.colors[variant === variants.SUBTLE ? "input" : "tertiary"];
 };
 
+const getButtonColor = ({ theme, variant }: StyledButtonMenuProps) => {
+  return theme.colors[variant === variants.SUBTLE ? "primaryDark" : "primaryBright"];
+};
+
 const StyledButtonMenu = styled.div<{ variant: Variants }>`
   background-color: ${getBackgroundColor};
-  border-radius: 16px;
+  border-radius: ${({ theme }) => theme.radii.default};
   display: inline-flex;
 
   & > button + button,
   & > a + a {
     margin-left: 2px; // To avoid focus shadow overlap
+    color: ${getButtonColor};
   }
 `;
 

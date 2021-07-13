@@ -40,7 +40,7 @@ const removePointerEvents = ({ disabled, as }: ThemedProps) => {
 
 const getButtonVariantProp = (prop: keyof ButtonThemeVariant) => ({
   theme,
-  variant = variants.PRIMARY,
+  variant = variants.PRIMARY
 }: ThemedProps) => {
   return theme.button[variant][prop];
 };
@@ -49,7 +49,7 @@ const StyledButton = styled.button<ButtonProps>`
   align-items: center;
   background-color: ${getButtonVariantProp("background")};
   border: ${getButtonVariantProp("border")};
-  border-radius: 16px;
+  border-radius: ${({ theme }) => theme.radii.default};
   box-shadow: ${getButtonVariantProp("boxShadow")};
   color: ${getButtonVariantProp("color")};
   cursor: pointer;
@@ -89,7 +89,7 @@ const StyledButton = styled.button<ButtonProps>`
 
 StyledButton.defaultProps = {
   fullWidth: false,
-  type: "button",
+  type: "button"
 };
 
 export default StyledButton;

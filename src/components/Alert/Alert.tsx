@@ -46,8 +46,8 @@ const getIcon = (variant: AlertProps["variant"] = variants.INFO) => {
 
 const IconLabel = styled.div<ThemedIconLabel>`
   background-color: ${getThemeColor};
-  border-radius: 16px 0 0 16px;
-  color: ${({ theme }) => theme.alert.background};
+  border-radius: 0px;
+  color: ${({ theme }) => theme.colors.textCard};
   padding: 12px;
 `;
 
@@ -60,6 +60,10 @@ const Details = styled.div<{ hasHandler: boolean }>`
   padding-top: 12px;
 `;
 
+const StyledIconButton = styled(IconButton)`
+  border: 0px;
+`;
+
 const CloseHandler = styled.div`
   border-radius: 0 16px 16px 0;
   right: 8px;
@@ -70,8 +74,9 @@ const CloseHandler = styled.div`
 const StyledAlert = styled(Flex)`
   position: relative;
   background-color: ${({ theme }) => theme.alert.background};
-  border-radius: 16px;
+  border-radius: 0px;
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
+  color: ${({ theme }) => theme.colors.textCard};
 `;
 
 const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {
@@ -83,14 +88,22 @@ const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {
         <Icon color="currentColor" width="24px" />
       </IconLabel>
       <Details hasHandler={!!onClick}>
-        <Text bold>{title}</Text>
-        {typeof children === "string" ? <Text as="p">{children}</Text> : children}
+        <Text bold color="textCard">
+          {title}
+        </Text>
+        {typeof children === "string" ? (
+          <Text color="textCard" as="p">
+            {children}
+          </Text>
+        ) : (
+          children
+        )}
       </Details>
       {onClick && (
         <CloseHandler>
-          <IconButton size="sm" variant="text" onClick={onClick}>
-            <CloseIcon width="24px" color="currentColor" />
-          </IconButton>
+          <StyledIconButton size="sm" variant="text" onClick={onClick}>
+            <CloseIcon width="24px" color="primaryDark" />
+          </StyledIconButton>
         </CloseHandler>
       )}
     </StyledAlert>

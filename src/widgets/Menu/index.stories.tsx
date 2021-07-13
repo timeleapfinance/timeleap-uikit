@@ -12,7 +12,7 @@ import { links } from "./config";
 export default {
   title: "Widgets/Menu",
   component: Menu,
-  argTypes: {},
+  argTypes: {}
 };
 
 const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
@@ -63,7 +63,7 @@ export const NotConnected: React.FC = () => {
         account={null}
         login={noop}
         logout={noop}
-        isDark
+        isDark={false}
         toggleTheme={noop}
         langs={langs}
         setLang={noop}
@@ -103,7 +103,7 @@ export const WithNoProfile: React.FC = () => {
         links={links}
         profile={{
           profileLink: "/profile",
-          noProfileLink: "/no-profile",
+          noProfileLink: "/no-profile"
         }}
       >
         <div>
@@ -147,7 +147,7 @@ export const WithProfile: React.FC = () => {
           username: "pancakeswap",
           image: "https://pancakeswap.finance/images/nfts/blueberries-preview.png",
           profileLink: "/profile",
-          noProfileLink: "/no-profile",
+          noProfileLink: "/no-profile"
         }}
       >
         <div>

@@ -6,7 +6,7 @@ import Svg from "./Svg";
 export default {
   title: "Components/Svg Icons",
   component: Svg,
-  argTypes: {},
+  argTypes: {}
 };
 
 export const Default: React.FC = () => {
@@ -30,13 +30,13 @@ const components = context.keys().reduce((accum, path) => {
   const file = path.substring(2).replace(".tsx", "");
   return {
     ...accum,
-    [file]: context(path),
+    [file]: context(path)
   };
 }, {});
 
 export const Icons: React.FC = () => {
   return (
-    <Flex justifyContent="start" alignItems="center" flexWrap="wrap" style={{ maxWidth: "800px" }}>
+    <Flex justifyContent="start" alignItems="center" flexWrap="wrap">
       {Object.keys(components).map((file) => {
         const Icon = components[file].default;
         return (

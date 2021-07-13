@@ -2,13 +2,14 @@ import { MouseEvent, ReactNode } from "react";
 
 export type AlertTheme = {
   background: string;
+  color: string;
 };
 
 export const variants = {
   INFO: "info",
   DANGER: "danger",
   SUCCESS: "success",
-  WARNING: "warning",
+  WARNING: "warning"
 } as const;
 
 export type Variants = typeof variants[keyof typeof variants];
