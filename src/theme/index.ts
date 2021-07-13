@@ -23,7 +23,6 @@ export interface PancakeTheme {
   spacing: Spacing;
   shadows: Shadows;
   radii: Radii;
-  opacity: Opacity;
   zIndices: ZIndices;
 }
 

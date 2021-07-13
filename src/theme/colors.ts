@@ -42,6 +42,8 @@ export const lightColors: Colors = {
   textDisabled: "#ababab", // disabled buttons / input fields
   textSubtle: "#f1e6ca", // Input Placeholder
   disabled: "#f1e6ca", // Input disabled
+  borderColor: "",
+  card: "",
 
   // button states
   bnPrimaryActive: "#3b5282",
