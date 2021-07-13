@@ -16,7 +16,6 @@ export interface PushedProps {
 }
 export interface NavTheme {
     background: string;
-    hover: string;
 }
 export interface MenuSubEntry {
     label: string;
@@ -34,7 +33,7 @@ export interface MenuEntry {
 export interface PanelProps {
     isDark: boolean;
     toggleTheme: (isDark: boolean) => void;
-    cakePriceUsd?: number;
+    timePriceUsd?: number;
     currentLang: string;
     langs: LangType[];
     setLang: (lang: LangType) => void;

@@ -2615,7 +2615,7 @@ var Logo = function (_a) {
         React.createElement(Icon$1H, { className: "desktop-icon", isDark: isDark })));
     return (React.createElement(Flex, null,
         React.createElement(MenuButton, { "aria-label": "Toggle menu", onClick: togglePush, mr: "24px" }, isPushed ? (React.createElement(Icon$1q, { width: "24px", color: "textSubtle" })) : (React.createElement(Icon$1p, { width: "24px", color: "textSubtle" }))),
-        isAbsoluteUrl ? (React.createElement(StyledLink$1, { as: "a", href: href, "aria-label": "Pancake home page" }, innerLogo)) : (React.createElement(StyledLink$1, { to: href, "aria-label": "Pancake home page" }, innerLogo))));
+        isAbsoluteUrl ? (React.createElement(StyledLink$1, { as: "a", href: href, "aria-label": "Timeleap home page" }, innerLogo)) : (React.createElement(StyledLink$1, { to: href, "aria-label": "Timeleap home page" }, innerLogo))));
 };
 var templateObject_1$y;
 
@@ -2676,21 +2676,24 @@ var socials = [
     {
         label: "Telegram",
         icon: "TelegramIcon",
+        href: "https://t.me/timeleapfinance"
+        /*
         items: [
-            {
-                label: "English",
-                href: "https://t.me/goosedefi"
-            },
-            {
-                label: "Announcements",
-                href: "https://t.me/goosefinanceann"
-            }
+          {
+            label: "English",
+            href: "https://t.me/goosedefi"
+          },
+          {
+            label: "Announcements",
+            href: "https://t.me/goosefinanceann"
+          }
         ]
+        */
     },
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "https://twitter.com/FinanceGoose"
+        href: "https://twitter.com/TimeleapFinance"
     }
 ];
 var MENU_HEIGHT = 80;
@@ -2810,7 +2813,7 @@ var PriceLink = styled.a(templateObject_2$c || (templateObject_2$c = __makeTempl
 var SettingsEntry = styled.div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled.div(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
 var PanelFooter = function (_a) {
-    var isPushed = _a.isPushed, pushNav = _a.pushNav, toggleTheme = _a.toggleTheme, isDark = _a.isDark, cakePriceUsd = _a.cakePriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, priceLink = _a.priceLink;
+    var isPushed = _a.isPushed, pushNav = _a.pushNav, toggleTheme = _a.toggleTheme, isDark = _a.isDark, timePriceUsd = _a.timePriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, priceLink = _a.priceLink;
     if (!isPushed) {
         return (React.createElement(Container$4, null,
             React.createElement(IconButton, { variant: "text", onClick: function () { return pushNav(true); } },
@@ -2818,9 +2821,9 @@ var PanelFooter = function (_a) {
     }
     return (React.createElement(Container$4, null,
         React.createElement(SocialEntry, null,
-            cakePriceUsd ? (React.createElement(PriceLink, { href: priceLink, target: "_blank" },
+            timePriceUsd ? (React.createElement(PriceLink, { href: priceLink, target: "_blank" },
                 React.createElement(Icon$D, { width: "24px", mr: "8px" }),
-                React.createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 })),
+                React.createElement(Text, { color: "textSubtle", bold: true }, "$" + timePriceUsd.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 })),
             React.createElement(Flex, null, socials.map(function (social, index) {
                 var Icon = Icons$1[social.icon];
                 var iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
@@ -3140,7 +3143,7 @@ var MobileOnlyOverlay = styled(Overlay)(templateObject_5$2 || (templateObject_5$
 });
 var Menu = function (_a) {
     var _b;
-    var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, links = _a.links, priceLink = _a.priceLink, profile = _a.profile, children = _a.children;
+    var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, timePriceUsd = _a.timePriceUsd, links = _a.links, priceLink = _a.priceLink, profile = _a.profile, children = _a.children;
     var isXl = useMatchBreakpoints().isXl;
     var isMobile = isXl === false;
     var _c = useState(!isMobile), isPushed = _c[0], setIsPushed = _c[1];
@@ -3183,7 +3186,7 @@ var Menu = function (_a) {
                 React.createElement(UserBlock, { account: account, login: login, logout: logout }),
                 profile && React.createElement(Avatar, { profile: profile }))),
         React.createElement(BodyWrapper, null,
-            React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links, priceLink: priceLink }),
+            React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, timePriceUsd: timePriceUsd, pushNav: setIsPushed, links: links, priceLink: priceLink }),
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };
@@ -3295,7 +3298,7 @@ var additionalColors = {
     waultfinance: "#2B7A78",
     overlay: "#324263"
 };
-var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors), { dropdownDeep: "#EEEEEE", background: "#697da6", backgroundDisabled: "#f1e6ca", backgroundAlt: "#f1e6ca", cardBorder: "#ababab", dropdown: "#f1e6ca", contrast: "#0d0f10", invertedContrast: "#FFFFFF", input: "#ffffff", inputSecondary: "#f1e6ca", tertiary: "#bd3e41", text: "#FFFFFF", textInput: "#5a5a5a", textCard: "#5a5a5a", textDisabled: "#ababab", textSubtle: "#f1e6ca", disabled: "#f1e6ca", 
+var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors), { dropdownDeep: "#EEEEEE", background: "#697da6", backgroundDisabled: "#f1e6ca", backgroundAlt: "#f1e6ca", cardBorder: "#ababab", dropdown: "#f1e6ca", contrast: "#0d0f10", invertedContrast: "#FFFFFF", input: "#ffffff", inputSecondary: "#f1e6ca", tertiary: "#bd3e41", text: "#FFFFFF", textInput: "#5a5a5a", textCard: "#5a5a5a", textDisabled: "#ababab", textSubtle: "#f1e6ca", disabled: "#f1e6ca", borderColor: "", card: "", 
     // button states
     bnPrimaryActive: "#3b5282", bnPrimaryHover: "#3b5282", bnTertiaryActive: "#da484c", bnTertiaryHover: "#da484c", bnDangerActive: "#ea181d", bnDangerHover: "#ea181d", gradients: {
         bubblegum: "linear-gradient(111.68deg, #f1e6ca 0%, #FFFFFF 100%)",
