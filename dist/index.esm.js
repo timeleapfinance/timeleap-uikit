@@ -3298,7 +3298,7 @@ var additionalColors = {
     waultfinance: "#2B7A78",
     overlay: "#324263"
 };
-var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors), { dropdownDeep: "#EEEEEE", background: "#697da6", backgroundDisabled: "#d6d6d6", backgroundAlt: "#f1e6ca", cardBorder: "#ababab", dropdown: "#f1e6ca", contrast: "#0d0f10", invertedContrast: "#FFFFFF", input: "#ffffff", inputSecondary: "#f1e6ca", tertiary: "#bd3e41", text: "#FFFFFF", textInput: "#5a5a5a", textCard: "#5a5a5a", textDisabled: "#5a5a5a", textSubtle: "#f1e6ca", disabled: "#f1e6ca", borderColor: "", card: "", 
+var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors), { dropdownDeep: "#EEEEEE", background: "#697da6", backgroundDisabled: "#e4e4e4", backgroundAlt: "#f1e6ca", cardBorder: "#ababab", dropdown: "#f1e6ca", contrast: "#0d0f10", invertedContrast: "#FFFFFF", input: "#ffffff", inputSecondary: "#f1e6ca", tertiary: "#bd3e41", text: "#FFFFFF", textInput: "#5a5a5a", textCard: "#5a5a5a", textDisabled: "#ababab", textSubtle: "#f1e6ca", disabled: "#f1e6ca", borderColor: "", card: "", 
     // button states
     bnPrimaryActive: "#3b5282", bnPrimaryHover: "#3b5282", bnTertiaryActive: "#da484c", bnTertiaryHover: "#da484c", bnDangerActive: "#ea181d", bnDangerHover: "#ea181d", gradients: {
         bubblegum: "linear-gradient(111.68deg, #f1e6ca 0%, #FFFFFF 100%)",
