@@ -16,7 +16,7 @@ const Row = styled.div`
 export default {
   title: "Components/Button Menu",
   component: ButtonMenu,
-  argTypes: {},
+  argTypes: {}
 } as Meta;
 
 export const Default: React.FC = () => {
@@ -29,7 +29,7 @@ export const Default: React.FC = () => {
   return (
     <>
       <Row>
-        <ButtonMenu activeIndex={index} onClick={handleClick}>
+        <ButtonMenu activeIndex={index} onClick={handleClick} variant="primary">
           <ButtonMenuItem>Button 1</ButtonMenuItem>
           <ButtonMenuItem>Button 2</ButtonMenuItem>
           <ButtonMenuItem>Button 3</ButtonMenuItem>
@@ -37,7 +37,7 @@ export const Default: React.FC = () => {
         </ButtonMenu>
       </Row>
       <Row>
-        <ButtonMenu activeIndex={index1} onClick={handleClick1} size="sm">
+        <ButtonMenu activeIndex={index1} onClick={handleClick1} variant="primary" size="sm">
           <ButtonMenuItem>Button 1</ButtonMenuItem>
           <ButtonMenuItem>Button 2</ButtonMenuItem>
           <ButtonMenuItem>Button 3</ButtonMenuItem>

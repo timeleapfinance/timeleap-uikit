@@ -7,11 +7,11 @@ type StyledButtonMenuProps = {
 };
 
 const getBackgroundColor = ({ theme, variant }: StyledButtonMenuProps) => {
-  return theme.colors[variant === variants.SUBTLE ? "input" : "tertiary"];
+  return theme.colors[variant === variants.SUBTLE ? "text" : "tertiary"];
 };
 
 const getButtonColor = ({ theme, variant }: StyledButtonMenuProps) => {
-  return theme.colors[variant === variants.SUBTLE ? "primaryDark" : "primaryBright"];
+  return theme.colors[variant === variants.SUBTLE ? "primary" : "primaryBright"];
 };
 
 const StyledButtonMenu = styled.div<{ variant: Variants }>`
