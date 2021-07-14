@@ -27,7 +27,7 @@ export const lightColors: Colors = {
   ...additionalColors,
   dropdownDeep: "#EEEEEE", // @unused
   background: "#697da6", // Panel Background Color
-  backgroundDisabled: "#f1e6ca", // Disabled Input Background Color
+  backgroundDisabled: "#d6d6d6", // Disabled Input Background Color
   backgroundAlt: "#f1e6ca", // Alert info boxes, Radio fill, Toggle fill, Cards
   cardBorder: "#ababab", // Card footer border-top (@todo)
   dropdown: "#f1e6ca", // Background for dropdown menus
@@ -39,7 +39,7 @@ export const lightColors: Colors = {
   text: "#FFFFFF", // For all areas outside of cards
   textInput: "#5a5a5a", // For all input fields
   textCard: "#5a5a5a", // Button, Alert, etc
-  textDisabled: "#ababab", // disabled buttons / input fields
+  textDisabled: "#697da6", // disabled buttons / input fields
   textSubtle: "#f1e6ca", // Input Placeholder
   disabled: "#f1e6ca", // Input disabled
   borderColor: "",
