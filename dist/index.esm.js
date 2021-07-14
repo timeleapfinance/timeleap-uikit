@@ -3309,7 +3309,7 @@ var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors),
         violetAlt: "linear-gradient(111.68deg, #CBD7EF 0%, #9A9FD0 100%)",
         gold: "linear-gradient(111.68deg, #FFD800 0%, #FDAB32 100%)"
     } });
-var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#ea8dd4", background: "#0d0f10", backgroundDisabled: "#3c3742", backgroundAlt: "#324263", cardBorder: "#1a1d22", contrast: "#FFFFFF", dropdown: "#324263", dropdownDeep: "#100C18", invertedContrast: "#0d0f10", input: "#54486b", inputSecondary: "#262130", primaryDark: "#f1e6ca", tertiary: "#bd3e41", text: "#FFFFFF", textInput: "#FFFFFF", textCard: "#f1e6ca", textDisabled: "#ababab", textSubtle: "#f1e6ca", disabled: "#524B63", 
+var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#ea8dd4", background: "#0d0f10", backgroundDisabled: "#3c3742", backgroundAlt: "#1a1d22", cardBorder: "#1a1d22", contrast: "#FFFFFF", dropdown: "#324263", dropdownDeep: "#100C18", invertedContrast: "#0d0f10", input: "#54486b", inputSecondary: "#262130", primaryDark: "#f1e6ca", tertiary: "#bd3e41", text: "#FFFFFF", textInput: "#FFFFFF", textCard: "#f1e6ca", textDisabled: "#ababab", textSubtle: "#f1e6ca", disabled: "#524B63", 
     // button states
     bnPrimaryActive: "#3b5282", bnPrimaryHover: "#3b5282", bnTertiaryActive: "#da484c", bnTertiaryHover: "#da484c", bnDangerActive: "#ea181d", bnDangerHover: "#ea181d", gradients: {
         bubblegum: "linear-gradient(139.73deg, #435780 0%, #000000 100%)",
