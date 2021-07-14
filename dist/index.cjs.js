@@ -1167,11 +1167,11 @@ var templateObject_1$6, templateObject_2$2;
 
 var getBackgroundColor = function (_a) {
     var theme = _a.theme, variant = _a.variant;
-    return theme.colors[variant === variants.SUBTLE ? "input" : "tertiary"];
+    return theme.colors[variant === variants.SUBTLE ? "text" : "tertiary"];
 };
 var getButtonColor = function (_a) {
     var theme = _a.theme, variant = _a.variant;
-    return theme.colors[variant === variants.SUBTLE ? "primaryDark" : "primaryBright"];
+    return theme.colors[variant === variants.SUBTLE ? "primary" : "primaryBright"];
 };
 var StyledButtonMenu = styled__default['default'].div(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: ", ";\n  display: inline-flex;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 2px; // To avoid focus shadow overlap\n    color: ", ";\n  }\n"], ["\n  background-color: ", ";\n  border-radius: ", ";\n  display: inline-flex;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 2px; // To avoid focus shadow overlap\n    color: ", ";\n  }\n"])), getBackgroundColor, function (_a) {
     var theme = _a.theme;
@@ -1198,7 +1198,7 @@ var InactiveButton = styled__default['default'](Button)(templateObject_1$8 || (t
 var ButtonMenuItem = function (_a) {
     var _b = _a.isActive, isActive = _b === void 0 ? false : _b, _c = _a.size, size = _c === void 0 ? sizes.MD : _c, _d = _a.variant, variant = _d === void 0 ? variants.PRIMARY : _d, as = _a.as, props = __rest(_a, ["isActive", "size", "variant", "as"]);
     if (!isActive) {
-        return (React__default['default'].createElement(InactiveButton, __assign({ forwardedAs: as, size: size, variant: "subtle", colorKey: variant === variants.PRIMARY ? "primaryBright" : "primaryDark" }, props)));
+        return (React__default['default'].createElement(InactiveButton, __assign({ forwardedAs: as, size: size, variant: "subtle", colorKey: variant === variants.PRIMARY ? "primary" : "primary" }, props)));
     }
     return React__default['default'].createElement(Button, __assign({ as: as, size: size, variant: variant }, props));
 };
