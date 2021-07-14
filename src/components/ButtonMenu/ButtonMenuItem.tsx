@@ -29,7 +29,7 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
       <InactiveButton
         forwardedAs={as}
         size={size}
-        variant="tertiary"
+        variant="subtle"
         colorKey={variant === variants.PRIMARY ? "primaryBright" : "primaryDark"}
         {...props}
       />
