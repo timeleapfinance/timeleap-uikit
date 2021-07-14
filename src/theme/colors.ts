@@ -70,7 +70,7 @@ export const darkColors: Colors = {
   secondary: "#ea8dd4", // Secondary color in dark mode
   background: "#0d0f10", // Panel body in dark mode
   backgroundDisabled: "#3c3742", // Disabled input in dark mode
-  backgroundAlt: "#324263", // Alert info boxes, Radio fill, Toggle fill
+  backgroundAlt: "#1a1d22", // Alert info boxes, Radio fill, Toggle fill
   cardBorder: "#1a1d22", // Card Footer border top
   contrast: "#FFFFFF", // For contrast
   dropdown: "#324263", // Tooltip dropdowns
