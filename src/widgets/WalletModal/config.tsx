@@ -10,33 +10,36 @@ const connectors: Config[] = [
   {
     title: "Metamask",
     icon: Metamask,
-    connectorId: "injected",
+    connectorId: "injected"
   },
+  {
+    title: "MathWallet",
+    icon: MathWallet,
+    connectorId: "injected"
+  },
+  {
+    title: "TokenPocket",
+    icon: TokenPocket,
+    connectorId: "injected"
+  },
+  {
+    title: "WalletConnect",
+    icon: WalletConnect,
+    connectorId: "walletconnect"
+  }
+
+  /* Unused Wallet Connections
   {
     title: "TrustWallet",
     icon: TrustWallet,
     connectorId: "injected",
   },
   {
-    title: "MathWallet",
-    icon: MathWallet,
-    connectorId: "injected",
-  },
-  {
-    title: "TokenPocket",
-    icon: TokenPocket,
-    connectorId: "injected",
-  },
-  {
-    title: "WalletConnect",
-    icon: WalletConnect,
-    connectorId: "walletconnect",
-  },
-  {
     title: "Binance Chain Wallet",
     icon: BinanceChain,
     connectorId: "bsc",
   },
+  */
 ];
 
 export default connectors;
