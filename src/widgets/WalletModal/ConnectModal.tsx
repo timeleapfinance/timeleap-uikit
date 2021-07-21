@@ -17,6 +17,7 @@ const HelpLink = styled(Link)`
   align-self: center;
   align-items: center;
   margin-top: 24px;
+  color: ${({ theme }) => theme.colors.primaryDark};
 `;
 
 const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
@@ -30,13 +31,10 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
         mb={index < config.length - 1 ? "8px" : "0"}
       />
     ))}
-    {/* <HelpLink */}
-    {/*  href="https://docs.pancakeswap.finance/guides/faq#how-do-i-set-up-my-wallet-on-binance-smart-chain" */}
-    {/*  external */}
-    {/* > */}
-    {/*  <HelpIcon color="primary" mr="6px" /> */}
-    {/*  Learn how to connect */}
-    {/* </HelpLink> */}
+    <HelpLink href="https://docs.matic.network/docs/develop/wallets/getting-started/" external>
+      <HelpIcon color="primaryDark" mr="6px" />
+      Learn how to connect
+    </HelpLink>
   </Modal>
 );
 
