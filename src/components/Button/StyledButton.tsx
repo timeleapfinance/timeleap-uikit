@@ -74,7 +74,7 @@ const StyledButton = styled.button<ButtonProps>`
   }
 
   &:focus:not(:active) {
-    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.secondary};
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.background};
   }
 
   &:active {
