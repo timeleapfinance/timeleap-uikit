@@ -2690,19 +2690,16 @@ var socials = [
     {
         label: "Telegram",
         icon: "TelegramIcon",
-        href: "https://t.me/timeleapcommunity"
-        /*
         items: [
-          {
-            label: "English",
-            href: "https://t.me/goosedefi"
-          },
-          {
-            label: "Announcements",
-            href: "https://t.me/goosefinanceann"
-          }
+            {
+                label: "Announcements",
+                href: "https://t.me/timeleapannouncements"
+            },
+            {
+                label: "Community",
+                href: "https://t.me/timeleapcommunity"
+            }
         ]
-        */
     },
     {
         label: "Twitter",
