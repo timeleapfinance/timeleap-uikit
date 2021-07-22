@@ -2690,7 +2690,7 @@ var socials = [
     {
         label: "Telegram",
         icon: "TelegramIcon",
-        href: "https://t.me/timeleapfinance"
+        href: "https://t.me/timeleapcommunity"
         /*
         items: [
           {
