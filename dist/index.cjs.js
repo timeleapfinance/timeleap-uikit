@@ -2645,11 +2645,13 @@ var links = [
         items: [
             {
                 label: "Exchange",
-                href: "https://exchange.pancakeswap.finance"
+                href: "https://exchange.pancakeswap.finance",
+                target: "_blank"
             },
             {
                 label: "Liquidity",
-                href: "https://exchange.pancakeswap.finance/#/pool"
+                href: "https://exchange.pancakeswap.finance/#/pool",
+                target: "_blank"
             }
         ]
     },
@@ -2804,7 +2806,7 @@ var PanelBody = function (_a) {
         if (entry.items) {
             return (React__default['default'].createElement(Accordion, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: entry.initialOpenState, className: calloutClass }, isPushed &&
                 entry.items.map(function (item) { return (React__default['default'].createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick },
-                    React__default['default'].createElement(MenuLink, { href: item.href }, item.label))); })));
+                    React__default['default'].createElement(MenuLink, { href: item.href, target: item.target }, item.label))); })));
         }
         return (React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
             React__default['default'].createElement(MenuLink, { href: entry.href, onClick: handleClick },

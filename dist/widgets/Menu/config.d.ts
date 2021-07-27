@@ -9,6 +9,15 @@ export declare const links: ({
     items: {
         label: string;
         href: string;
+        target: string;
+    }[];
+    href?: undefined;
+} | {
+    label: string;
+    icon: string;
+    items: {
+        label: string;
+        href: string;
     }[];
     href?: undefined;
 })[];
