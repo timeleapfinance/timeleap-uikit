@@ -10,11 +10,13 @@ export const links = [
     items: [
       {
         label: "Exchange",
-        href: "https://exchange.pancakeswap.finance"
+        href: "https://exchange.pancakeswap.finance",
+        target: "_blank"
       },
       {
         label: "Liquidity",
-        href: "https://exchange.pancakeswap.finance/#/pool"
+        href: "https://exchange.pancakeswap.finance/#/pool",
+        target: "_blank"
       }
     ]
   },
