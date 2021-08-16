@@ -58,6 +58,8 @@ export const socials = [
   {
     label: "Telegram",
     icon: "TelegramIcon",
+    href: "https://t.me/timeleapfinance"
+    /*
     items: [
       {
         label: "Announcements",
@@ -65,9 +67,9 @@ export const socials = [
       },
       {
         label: "Community",
-        href: "https://t.me/timeleapcommunity"
+        href: "https://t.me/timeleapfinance"
       }
-    ]
+    ]*/
   },
   {
     label: "Twitter",
