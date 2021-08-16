@@ -2692,16 +2692,18 @@ var socials = [
     {
         label: "Telegram",
         icon: "TelegramIcon",
+        href: "https://t.me/timeleapfinance"
+        /*
         items: [
-            {
-                label: "Announcements",
-                href: "https://t.me/timeleapannouncements"
-            },
-            {
-                label: "Community",
-                href: "https://t.me/timeleapcommunity"
-            }
-        ]
+          {
+            label: "Announcements",
+            href: "https://t.me/timeleapannouncements"
+          },
+          {
+            label: "Community",
+            href: "https://t.me/timeleapfinance"
+          }
+        ]*/
     },
     {
         label: "Twitter",
