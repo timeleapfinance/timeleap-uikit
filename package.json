@@ -19,12 +19,6 @@
     "test": "jest",
     "release": "yarn build && np"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn format",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "jest": {
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.js"
@@ -71,7 +65,7 @@
   },
   "peerDependencies": {
     "react": "^17.0.1",
-    "react-dom": "^16.14.0",
+    "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.0"
   },
