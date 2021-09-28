@@ -29,7 +29,7 @@ const MenuEntry = styled.div<Props>`
   cursor: pointer;
   display: flex;
   align-items: center;
-  height: ${({ secondary }) => (secondary ? "40px" : "64px")};
+  height: ${({ secondary }) => (secondary ? "36px" : "48px")};
   margin: ${({ secondary }) => (secondary ? "0px" : "4px 0px")};
   padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
