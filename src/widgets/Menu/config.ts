@@ -21,6 +21,16 @@ export const links = [
     ]
   },
   {
+    label: "WORMHOLES",
+    icon: "MenuWormholeIcon",
+    href: "/farms"
+  },
+  {
+    label: "VAULTS",
+    icon: "MenuVaultIcon",
+    href: "/farms"
+  },
+  {
     label: "TIMELEAPS",
     icon: "MenuTimeLeapIcon",
     href: "/farms"
