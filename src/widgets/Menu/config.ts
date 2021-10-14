@@ -26,6 +26,11 @@ export const links = [
     href: "/farms"
   },
   {
+    label: "DIMENSIONS",
+    icon: "MenuDimensionsIcon",
+    href: "/farms"
+  },
+  {
     label: "VAULTS",
     icon: "MenuVaultIcon",
     href: "/farms"

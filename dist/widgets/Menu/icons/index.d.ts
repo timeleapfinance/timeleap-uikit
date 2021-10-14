@@ -29,3 +29,4 @@ export { default as MenuTreasuryIcon } from "./MenuTreasury";
 export { default as MenuSwap2Icon } from "./MenuSwap2";
 export { default as MenuVaultIcon } from "./MenuVault";
 export { default as MenuWormholeIcon } from "./MenuWormhole";
+export { default as MenuDimensionsIcon } from "./MenuDimensions";

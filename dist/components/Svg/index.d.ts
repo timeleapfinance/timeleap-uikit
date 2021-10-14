@@ -88,5 +88,6 @@ export { default as MenuTreasuryIcon } from "./Icons/MenuTreasury";
 export { default as MenuVaultIcon } from "./Icons/MenuVault";
 export { default as MenuSwap2Icon } from "./Icons/MenuSwap2";
 export { default as MenuWormholeIcon } from "./Icons/MenuWormhole";
+export { default as MenuDimensionsIcon } from "./Icons/MenuDimensions";
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";
