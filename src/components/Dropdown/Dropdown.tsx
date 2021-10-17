@@ -7,7 +7,7 @@ const getLeft = ({ position }: PositionProps) => {
   if (position === "top-right") {
     return "100%";
   }
-  return "50%";
+  return "5%";
 };
 
 const getBottom = ({ position }: PositionProps) => {
@@ -16,6 +16,8 @@ const getBottom = ({ position }: PositionProps) => {
   }
   return "auto";
 };
+
+// Need to create get top
 
 const DropdownContent = styled.div<{ position: Position }>`
   width: max-content;
