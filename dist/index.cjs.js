@@ -1352,7 +1352,7 @@ var getLeft = function (_a) {
     if (position === "top-right") {
         return "100%";
     }
-    return "5%";
+    return "50%";
 };
 var getBottom = function (_a) {
     var position = _a.position;
