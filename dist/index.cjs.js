@@ -2768,7 +2768,7 @@ var socials = [
     {
         label: "Telegram",
         icon: "TelegramIcon",
-        href: "https://t.me/timeleapfinance"
+        href: "https://t.me/timeleapgamefi"
         /*
         items: [
           {
@@ -2784,7 +2784,7 @@ var socials = [
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "https://twitter.com/TimeleapFinance"
+        href: "https://twitter.com/TimeleapGameFi"
     }
 ];
 var MENU_HEIGHT = 80;
