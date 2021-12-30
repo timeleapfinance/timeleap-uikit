@@ -73,7 +73,7 @@ export const socials = [
   {
     label: "Telegram",
     icon: "TelegramIcon",
-    href: "https://t.me/timeleapfinance"
+    href: "https://t.me/timeleapgamefi"
     /*
     items: [
       {
@@ -89,7 +89,7 @@ export const socials = [
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://twitter.com/TimeleapFinance"
+    href: "https://twitter.com/TimeleapGameFi"
   }
 ];
 
